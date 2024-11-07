@@ -1,0 +1,148 @@
+:root {
+    --time: 0.707s;
+    scroll-behavior: smooth;
+}
+
+html body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Nanum Myeongjo, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    overflow: hidden;
+}
+
+h1, h2, p {
+  margin:0;
+}
+
+.cIcon {
+    padding-top: 20px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 8em;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    will-change: transform;
+}
+
+.card {
+    perspective: 70em;
+    flex: 0 0 auto;
+    width: 28em;
+    align-items: center;
+    display: flex;
+    transition: z-index, transform calc(var(--time) / 4);
+    transition-delay: var(--time), 0s;
+    text-decoration: none;
+    color: inherit;
+    z-index: 0;
+}
+
+.card-body {
+    display: flex;
+    transform-style: preserve-3d;
+    transition: var(--time) transform;
+}
+
+.card:hover .card-body, .card:focus .card-body {
+    transform: rotateX(-180deg);
+    scale: .9;
+}
+
+.card-front, .card-back {
+    backface-visibility: hidden;
+    min-width: 100%;
+}
+
+.card-back {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    text-align:center;
+    background-image: url('/img/6a.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    transform: rotateX(-180deg) translate(-100%, 0);
+}
+
+.card:hover {
+    transition-delay: 0s;
+    z-index: 1;
+}
+
+.card:active {
+    transform: scale(0.5);
+}
+
+.card-body {
+    flex: 1;
+}
+
+.card-front, .card-back {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    font-size: 1.2rem;    
+}
+
+.cover {
+    width: 100%;
+}
+
+.card-title {
+    font-size: 1.8rem;
+}
+
+@media (max-width: 767px) {
+    html, body {
+        overflow-y: auto;
+        height: auto;
+    }
+
+    .cards {
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: 0;
+    }
+
+    .card {
+        width: 80%;
+        max-width: 40rem;
+        perspective: none;
+    }
+
+    .card-body {
+        width: 100%;
+    }
+
+    .card {
+    perspective: 70em;
+    flex: 0 0 auto;
+    width: 28em;
+    align-items: center;
+    display: flex;
+    transition: z-index, transform calc(var(--time) / 4);
+    transition-delay: var(--time), 0s;
+    text-decoration: none;
+    color: inherit;
+    z-index: 0;
+}
+
+.card-body {
+    display: flex;
+    transform-style: preserve-3d;
+    transition: var(--time) transform;
+}
+
+.card:hover .card-body, .card:focus .card-body {
+    transform: rotateX(-180deg);
+    scale: .9;
+}
+}

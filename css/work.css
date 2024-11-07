@@ -1,0 +1,342 @@
+:root {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    font-family: Nanum Myeongjo, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+
+    @media screen and (min-width: 768px) {
+        height: 100vh;
+    }
+}
+
+main {
+    background-color: #D2CECB;
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+        flex: 1;
+    }
+}
+
+.page-content-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.proj-header-line1 {
+    position: relative;
+    top: 8vh;
+    width: 100vw;
+    border-bottom: solid 0.1em black;
+}
+
+.proj-title {
+    font-size: 5em;
+    display: flex;
+    position: relative;
+    top: 12vh;
+    left: 10rem;
+    line-height: 1.2;
+    letter-spacing: 0.6rem;
+}
+
+.proj-header-line2 {
+    position: relative;
+    top: 15vh;
+    width: 100vw;
+    border-bottom: solid 0.1em black;
+}
+
+.proj-header-line3 {
+    position: relative;
+    top: 80vh;
+    width: 100vw;
+    border-bottom: solid 0.1em black;
+}
+
+.cards-wrapper {
+    position: relative;
+    left: 2em;
+    right: 0;
+    bottom: 0;
+    width: calc(100% - 5rem);
+    height: 100vh;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100%;
+    will-change: transform;
+    padding-left: 5rem;
+}
+
+header {
+    flex-basis: 80px;
+    background-color:#D2CECB;
+}
+
+.logo img {
+    height: 3.3em;
+    position: absolute;
+    top: 1.1em;
+    left: 1.4em;
+    cursor: pointer;
+}
+
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1em;
+    position: absolute;
+    bottom: 2.5em;
+    left: 1.8em;
+}
+
+.social-icons img {
+    width: 1.5em;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all 0.3s;
+    z-index: 10;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        width: 80px;
+        height: 100vh;
+    }
+
+    &.secondary {
+        background-color: darkblue;
+    }
+
+    a {
+        width: 80px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: black;
+        transition: background-color 0.3s ease;
+        box-sizing: border-box;
+        font-size: 1.8em;
+
+        @media screen and (min-width: 768px) {
+            border-left: solid 0.05em black;
+            border-right: solid 0.05em black;
+        }
+
+        @media screen and (max-width: 768px) {
+            border-top: solid 0.05em black;
+            border-bottom: solid 0.05em black;
+        }
+
+        &.index {
+            background-color: #9E9E96;
+        }
+        &.work {
+            background-color: #A29200;
+        }
+        &.about {
+            background-color: #E2DCC6;
+        }
+        &.contact {
+            background-color: #8CACC2;
+        }
+
+        @media screen and (min-width: 768px) {
+            span {
+                transform: rotate(90deg);
+                display: inline-block;
+            }
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 767px) {
+    body {
+        flex-direction: column;
+    }
+
+    main {
+        width: 100vw;
+        height: auto;
+    }
+
+    nav.primary {
+        position: fixed;
+        top: 60px;
+        width: 100vw;
+        height: auto;
+        flex-direction: column;
+    }
+
+    nav.secondary {
+        position: fixed;
+        width: 100vw;
+        height: auto;
+        flex-direction: column;
+    }
+
+    nav.expanded {
+        bottom: auto;
+        top: 80px;
+        height: calc(100% - 60px);
+        flex-direction: column;
+    }
+
+    nav a {
+        width: 100%;
+        height: 60px;
+        bottom: 10rem;
+    }
+
+    .social-icons {
+    display: flex;
+    flex-direction: row-reverse;
+    position: absolute;
+    gap: 1.2em;
+    top: 3em;
+    right: 2.5em;
+    }
+
+    .social-icons img {
+    width: 2.4rem;
+    }
+
+    .page-content-container {
+    position: relative;
+    width: 100vw; 
+    height: 70vh;
+    }
+
+.proj-header-line1 {
+    position: absolute;
+    top: 20rem;
+    width: 100vw;
+}
+
+.proj-title {
+    font-size: 8rem;
+    display: flex;
+    position: relative;
+    top: 10rem;
+    left: 4rem;
+    line-height: 1.2;
+    letter-spacing: 0.6rem;
+}
+
+.proj-header-line2 {
+    display: none;
+}
+
+.proj-header-line3 {
+    position: fixed;
+    rotate: -90deg;
+    top: 20rem;
+    left: 10rem;
+    width: 100vw;
+}
+
+.cards-wrapper {
+        position: static;
+        width: 100%;
+        height: auto;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .cards {
+        flex-direction: column;
+        width: max-content;
+    }
+
+    .card {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        height: auto;
+        overflow-y: auto;
+    }
+
+    main {
+        height: auto;
+        overflow: visible;
+        min-height: 100vh;
+    }
+
+    .page-content-container {
+        height: auto;
+        overflow: visible;
+        position: static;
+    }
+
+    .cards-wrapper {
+        position: relative;
+        width: 100%;
+        height: auto;
+        overflow-y: visible;
+        overflow-x: hidden;
+        left: 13em;
+        padding: 2rem;
+        box-sizing: border-box;
+    }
+
+    .cards {
+        display: block;
+        height: auto;
+        padding: 0;
+        transform: none !important;
+    }
+
+    .card {
+        margin-bottom: 2rem;
+        width: 100vw;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .proj-header-line1,
+    .proj-header-line2,
+    .proj-header-line3 {
+        position: static;
+        width: 100%;
+        rotate: 0deg;
+    }
+
+    .proj-title {
+        position: static;
+        margin: 2rem 0;
+        font-size: 6rem;
+        justify-content: center;
+    }
+}

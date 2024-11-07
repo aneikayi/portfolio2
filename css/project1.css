@@ -1,0 +1,596 @@
+:root {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    font-family: Nanum Myeongjo, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+    background-color: #D2CECB;
+    
+    @media screen and (min-width: 768px) {
+        height: 100vh;
+    }
+}
+
+header {
+    flex-basis: 80px;
+    background-color:#D2CECB;
+}
+
+.logo img {
+    height: 3.3em;
+    position: absolute;
+    top: 1.1em;
+    left: 1.4em;
+    cursor: pointer;
+}
+
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1em;
+    position: absolute;
+    bottom: 2.5em;
+    left: 1.8em;
+}
+
+.social-icons img {
+    width: 1.5em;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all 0.3s;
+    height: 100vh;
+    z-index: 1000;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        width: 80px;
+        height: 100vh;
+    }
+
+    &.secondary {
+        background-color: darkblue;
+    }
+
+    a {
+        width: 80px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: black;
+        transition: background-color 0.3s ease;
+        box-sizing: border-box;
+        font-size: 1.8em;
+        height: 100vh;
+
+        @media screen and (min-width: 768px) {
+            border-left: solid 0.05em black;
+            border-right: solid 0.05em black;
+        }
+
+        @media screen and (max-width: 768px) {
+            border-top: solid 0.05em black;
+            border-bottom: solid 0.05em black;
+        }
+
+        &.index {
+            background-color: #9E9E96;
+        }
+        &.work {
+            background-color: #A29200;
+        }
+        &.about {
+            background-color: #E2DCC6;
+        }
+        &.contact {
+            background-color: #8CACC2;
+        }
+
+        @media screen and (min-width: 768px) {
+            span {
+                transform: rotate(90deg);
+                display: inline-block;
+            }
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+main {
+    background-color: transparent;
+
+    @media screen and (min-width: 768px) {
+        flex: 1;
+    }
+}
+
+.main-content {
+    position: absolute;
+    left: 240px;
+    right: 160px;
+    transition: right 0.3s ease;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-width: none;
+    height: 100vh;
+}
+
+.proj1-header-line1 {
+    position: relative;
+    top: 12vh;
+    width: 100vw;
+    border-bottom: solid 0.1em black;
+}
+
+.proj1-title {
+    font-size: 3em;
+    display: flex;
+    padding-top: 14vh;
+    padding-left: 1em;
+    line-height: 1.2;
+    letter-spacing: 0.6rem;
+}
+
+.proj1-header-line2 {
+    position: relative;
+    top: 16vh;
+    width: 100vw;
+    border-bottom: solid 0.1em black;
+}
+
+.proj1-subtitle {
+    font-size: 1.5em;
+    display: flex;
+    position: relative;
+    top: 18vh;
+    left: 3em;
+    line-height: 1.6;
+    letter-spacing: 0.6rem;
+    color: #8CACC2; 
+}
+
+.proj1-header-line3 {
+    position: relative;
+    display: flex;
+    top: 24vh;
+    width: 100%;
+    border-bottom: solid 0.1em black;
+    z-index: 1;
+}
+
+.p1-para1t {
+    position: relative;
+    top: 30vh;
+    left: 16vh;
+    display: flex;
+    font-size: 4em;
+    font-style: italic;
+    color: #A44A0C;
+}
+
+.p1-para1p {
+    padding-top: 24vh;
+    padding-left: 48em;
+    display: flex;
+    font-size: 1.2rem;
+    line-height: 2;
+    color: black;
+    z-index: 10;
+}
+
+.proj1-img1 {
+    position: relative;
+    top: 24vh;
+    left: 5em;
+    display: flex;
+    width: 90%;
+}
+
+.proj1-header-line4 {
+    position: relative;
+    display: flex;
+    top: 26vh;
+    width: 100%;
+    border-bottom: solid 0.1em black;
+    z-index: 1;
+}
+
+.poster-slider {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    top: 37vh;
+    left: 20vh;
+}
+
+.slider-container {
+    display: flex;
+    transition: transform 0.1s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .poster-slider {
+        max-width: 70%;
+        padding-right: 12.5em;
+        top: 17.5em;
+    }
+}
+
+.p1-para2t {
+    position: relative;
+    top: -10vh;
+    left: 10vh;
+    display: flex;
+    font-size: 4em;
+    font-style: italic;
+    color: #A44A0C;
+}
+
+.p1-para2p {
+    position: relative;
+    top: -8vh;
+    left: 10vh;
+    width: 54rem;
+    display: flex;
+    font-size: 1.6rem;
+    line-height: 2;
+    color: black;
+}
+
+.proj1-header-line5 {
+    position: relative;
+    display: flex;
+    top: 14vh;
+    width: 100%;
+    border-bottom: solid 0.1em black;
+    z-index: 1;
+}
+
+.proj1-img3 {
+    position: relative;
+    top: 14vh;
+    display: flex;
+    width: 85%;
+    float: right;
+}
+
+.proj1-img4 {
+    position: relative;
+    top: 14vh;
+    float: left;
+    display: flex;
+    width: 85%;
+    float: right;
+}
+
+.proj1-header-line6 {
+    position: relative;
+    display: flex;
+    top: 28vh;
+    width: 100%;
+    border-bottom: solid 0.1em black;
+    z-index: 1;
+}
+
+.proj1-img5 {
+    position: relative;
+    top: 28vh;
+    display: flex;
+    width: 75%;
+    float: left;
+}
+
+.proj1-img6 {
+    position: relative;
+    top: 28vh;
+    display: flex;
+    width: 75%;
+    float: left;
+}
+
+.proj1-header-line7 {
+    position: relative;
+    display: flex;
+    top: 40vh;
+    width: 100%;
+    border-bottom: solid 0.1em black;
+    z-index: 1;
+}
+
+.p1-para3t {
+    position: relative;
+    top: 86vh;
+    left: 2em;
+    display: flex;
+    font-size: 4em;
+    font-style: italic;
+    color: #A44A0C;
+}
+
+.p1-para4t {
+    position: relative;
+    top: 90vh;
+    left: -2.5em;
+    display: flex;
+    font-size: 4em;
+    font-style: italic;
+    color: #A44A0C;
+}
+
+.p3-click {
+    position: relative;
+    top: 50vh;
+    float: right;
+    padding-right: 10rem;
+    padding-bottom: 10rem;
+    font-size: 2.6rem;
+    line-height: 2;
+    color: black;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.click-arrow {
+    height: 6rem;
+    margin-left: 1rem;
+}
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in-para {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.slide-in-para.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 767px) {
+    body {
+        flex-direction: column;
+    }
+
+   main {
+        flex: 1;
+        width: 100vw;
+        overflow-x: hidden;
+        overflow-y: auto;
+        height: calc(100vh - 60px); 
+        padding-bottom: 60px;
+    }
+
+    .main-content {
+        position: relative;
+        width: 100vw;
+        left: 0;
+        padding-top: 10px;
+        overflow-y: auto;
+        background-color: #D2CECB;
+    }
+    
+    nav.primary {
+        position: fixed;
+        top: 60px;
+        width: 100vw;
+        height: auto;
+        flex-direction: column; 
+    }
+
+    nav.secondary {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100vw; 
+        height: auto;
+        flex-direction: row;
+    }
+
+    nav.expanded {
+        bottom: auto;
+        top: 80px;
+        height: calc(100% - 60px);
+        flex-direction: column; 
+    }
+
+    nav a {
+        width: 100%;
+        height: 60px; 
+    }
+
+    .social-icons {
+    display: flex;
+    flex-direction: row-reverse;
+    position: absolute;
+    gap: 1.2em;
+    top: 3em;
+    right: 2.5em;
+    }
+
+    .social-icons img {
+    width: 2.4rem;
+    }
+
+.p1-para1t {
+    position: relative;
+    top: 28vh;
+    left: 34vh;
+    display: flex;
+    font-size: 3em;
+    font-style: italic;
+    color: #A44A0C;
+}
+
+.p1-para1p {
+    position: relative;
+    top: 30vh;
+    left: 10vh;
+    width: 80rem;
+    display: flex;
+    font-size: 1.6rem;
+    line-height: 2;
+    color: black;
+    z-index: 10;
+}
+
+.proj1-img1 {
+    position: relative;
+    top: 28vh;
+    left: 0;
+    display: flex;
+    width: 100%;
+}
+
+.proj1-header-line4 {
+    position: relative;
+    display: flex;
+    top: 26vh;
+    width: 100%;
+    border-bottom: solid 0.1em black;
+    z-index: 1;
+}
+
+   .p1-para2t {
+    position: relative;
+    top: 22vh;
+    left: 6vh;
+    display: flex;
+    font-size: 3em;
+    font-style: italic;
+    color: #A44A0C;
+}
+
+.p1-para2p {
+    position: relative;
+    top: 24vh;
+    left: 6vh;
+    width: 80rem;
+    display: flex;
+    font-size: 1.6rem;
+    line-height: 2;
+    color: black;
+}
+
+.proj1-header-line5 {
+    position: relative;
+    display: flex;
+    top: 28vh;
+    width: 100%;
+    border-bottom: solid 0.1em black;
+    z-index: 1;
+}
+
+.proj1-img3 {
+    position: relative;
+    top: 28vh;
+    display: flex;
+    width: 85%;
+    float: right;
+}
+
+.proj1-img4 {
+    position: relative;
+    top: 14vh;
+    float: left;
+    display: flex;
+    width: 85%;
+    float: right;
+}
+
+.proj1-header-line6 {
+    position: relative;
+    display: flex;
+    top: 28vh;
+    width: 100%;
+    border-bottom: solid 0.1em black;
+    z-index: 1;
+}
+
+.proj1-img5 {
+    position: relative;
+    top: 28vh;
+    display: flex;
+    width: 75%;
+    float: left;
+}
+
+.proj1-img6 {
+    position: relative;
+    top: 28vh;
+    display: flex;
+    width: 75%;
+    float: left;
+}
+
+.proj1-header-line7 {
+    position: relative;
+    display: flex;
+    top: 40vh;
+    width: 100%;
+    border-bottom: solid 0.1em black;
+    z-index: 1;
+}
+
+.p1-para3t {
+    position: relative;
+    top: 96vh;
+    left: 1.5em;
+    display: flex;
+    font-size: 3em;
+    font-style: italic;
+    color: #A44A0C;
+}
+
+.p1-para4t {
+    position: relative;
+    top: 98vh;
+    left: -5em;
+    display: flex;
+    font-size: 3em;
+    font-style: italic;
+    color: #A44A0C;
+}
+}

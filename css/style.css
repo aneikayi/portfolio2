@@ -1,0 +1,341 @@
+:root {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    font-family: Nanum Myeongjo, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 16px;
+
+    @media screen and (min-width: 768px) {
+        height: 100vh;
+    }
+}
+
+main {
+    background-color:#D2CECB;
+    overflow: auto;
+
+    @media screen and (min-width: 768px) {
+        flex: 1;
+    }
+}
+
+
+.nav-primary,
+.nav-secondary {
+    z-index: 1000;
+    position: relative;
+}
+
+.main-container {
+    overflow: hidden;
+    z-index: 500;
+}
+
+.main-content {
+    overflow: hidden;
+    box-sizing: border-box;
+    flex-wrap: nowrap;
+    z-index: 500;
+}
+
+header {
+    flex-basis: 80px;
+    background-color:#D2CECB;
+}
+
+.logo img {
+    height: 3.3em;
+    position: absolute;
+    top: 1.1em;
+    left: 1.4em;
+    cursor: pointer;
+}
+
+
+.social-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1em;
+    position: absolute;
+    bottom: 2.5em;
+    left: 1.8em;
+}
+
+.social-icons img {
+    width: 1.5em;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all 0.3s;
+    z-index: 10;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: row;
+        width: 40px;
+        height: 100vh;
+    }
+
+    &.secondary {
+        background-color: darkblue;
+    }
+
+    a {
+        width: 60px;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: black;
+        transition: background-color 0.3s ease;
+        box-sizing: border-box;
+        font-size: 1.2em;
+
+        @media screen and (min-width: 768px) {
+            border-left: solid 0.05em black;
+            border-right: solid 0.05em black;
+        }
+
+        @media screen and (max-width: 768px) {
+            border-top: solid 0.05em black;
+            border-bottom: solid 0.05em black;
+        }
+
+        &.home {
+            background-color: #9E9E96;
+        }
+        &.work {
+            background-color: #A29200;
+        }
+        &.about {
+            background-color: #E2DCC6;
+        }
+        &.contact {
+            background-color: #8CACC2;
+        }
+
+        @media screen and (min-width: 768px) {
+            span {
+                transform: rotate(90deg);
+                display: inline-block;
+            }
+        }
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+.header-line1 {
+    padding-top: 6em;
+    width: 100vw;
+    border-bottom: solid 0.1em black;
+}
+
+.header-line2 {
+    top: 10vh;
+    border-bottom: solid 0.1em black;
+}
+
+.title {
+    font-size: 4em;
+    display: flex;
+    line-height: 1.2;
+    letter-spacing: 0.6rem;
+}
+
+.intro {
+    display: flex;
+    left: 16rem;
+    top: 14vh;
+    font-size: 1.4em;
+    line-height: 2;
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    word-spacing: 0.8rem;
+}
+
+.intro-line {
+    top: 18vh;
+    width: 100vw;
+    border-bottom: solid 0.1em black;
+}
+
+.title.index-hover-item {
+    position: relative;
+}
+
+.title.index-hover-item .hover-image {
+    position: absolute;
+    display: none;
+    width: 4em;
+    top: 50%;
+    left: 50%;
+    transform: translateX(60%) translateY(-60%);
+    z-index: 1;
+}
+
+.title.index-hover-item:hover .hover-image {
+    display: block;
+}
+
+.index-hover-item {
+    position: relative;
+    display: inline-block;
+}
+
+.index-hover-item .hover-image {
+    position: absolute;
+    display: none;
+    width: 16em;
+    top: -20rem;
+    left: 50%;
+    transform: translateX(20%) translateY(-80%);
+    z-index: 10;
+}
+
+.index-hover-item:hover
+.hover-image {
+    display: block;
+}
+
+.highlight {
+    font-size: 2rem;
+    display: inline-block;
+    position: relative;
+    padding: 6px 12px;
+    z-index: 1;
+}
+
+.highlight::before {
+    content: '';
+    position: absolute;
+    left: .5rem;
+    right: .5rem;
+    top: .3rem;
+    bottom: .8rem;
+    z-index: -1;
+    border-radius: 5px;
+}
+
+.highlight-yellow::before {
+    background-color: #A29200;
+}
+
+.highlight-blue::before {
+    background-color: #8CACC2;;
+}
+
+.highlight-orange::before {
+    width: 14rem;
+	height: 4rem;
+	transform: skew(20deg);
+    background-color: #F08030;
+}
+
+.highlight-beige::before {
+    background-color: #E2DCC6;
+}
+
+.wigglyline {
+    text-decoration: underline;
+
+		&.wigglyline {
+			text-decoration: underline overline wavy greenyellow;
+			text-decoration-thickness: 0.5rem;
+			text-underline-offset: .8rem;
+    }}
+
+.rectangle::before {
+    content: '';
+    position: absolute;
+    left: 2px;
+    right: 2px;
+    top: 2px;
+    bottom: 2px;
+    z-index: -1;
+    border-radius: 30px;
+    background-color: pink;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+
+    main {
+        width: 100vw;
+        height: auto;
+    }
+
+    nav.primary {
+        position: fixed;
+        top: 60px;
+        width: 100vw;
+        height: auto;
+        flex-direction: column;
+    }
+
+    nav.secondary {
+        bottom: 0;
+        top: auto;
+    }
+
+    nav.expanded {
+        bottom: auto;
+        top: 80px;
+        height: calc(100% - 60px);
+        flex-direction: column;
+    }
+
+    nav a {
+        width: 100%;
+        height: 60px;
+    }
+
+    .main-content {
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 320px;
+    bottom: 0;
+    overflow: hidden;
+    transition: right 0.3s ease;
+    background-color:#D2CECB;
+    }
+
+    .social-icons {
+    display: flex;
+    flex-direction: row-reverse;
+    position: absolute;
+    gap: 1.2em;
+    top: 3em;
+    right: 2.5em;
+    }
+
+    .social-icons img {
+    width: 2.4rem;
+    }
+
+    .title {
+    font-size: 7.5rem;
+    position: relative;
+    top: 1vh;
+    left: 8vh;
+    line-height: 1.2;
+    letter-spacing: 0.6rem;
+}
+}

@@ -204,8 +204,8 @@ nav {
     position: absolute;
     display: none;
     width: 16em;
-    top: -20rem;
-    left: 50%;
+    top: -10rem;
+    left: 10%;
     transform: translateX(20%) translateY(-80%);
     z-index: 10;
 }

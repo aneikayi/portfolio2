@@ -87,9 +87,10 @@ header {
     }
 
 .info {
-    font-size: 1.2em;
-    padding-top: 47vh;
+    font-size: 1em;
+    padding-top: 42vh;
     padding-left: 3.5em;
+    margin-right: 2em;
     line-height: 1.5;
     color: #2A420C;
 }

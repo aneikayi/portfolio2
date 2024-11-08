@@ -182,16 +182,17 @@ main {
 .p1-para1t {
     position: relative;
     top: 30vh;
-    left: 16vh;
     display: flex;
-    font-size: 4em;
+    padding-left: 1em;
+    font-size: 3.4em;
     font-style: italic;
     color: #A44A0C;
 }
 
 .p1-para1p {
     padding-top: 24vh;
-    padding-left: 48em;
+    padding-left: 44em;
+    padding-right: 6em;
     display: flex;
     font-size: 1.2rem;
     line-height: 2;
@@ -200,15 +201,12 @@ main {
 }
 
 .proj1-img1 {
-    position: relative;
-    top: 24vh;
-    left: 5em;
+    padding-left: 1em;
     display: flex;
     width: 90%;
 }
 
 .proj1-header-line4 {
-    position: relative;
     display: flex;
     top: 26vh;
     width: 100%;
@@ -217,12 +215,11 @@ main {
 }
 
 .poster-slider {
-    width: 100%;
     max-width: 700px;
     margin: 0 auto;
     overflow: hidden;
     position: relative;
-    top: 37vh;
+    top: 10vh;
     left: 20vh;
 }
 
@@ -248,29 +245,27 @@ main {
 
 .p1-para2t {
     position: relative;
-    top: -10vh;
-    left: 10vh;
-    display: flex;
-    font-size: 4em;
+    padding-left: 1em;
+    top: -30vh;
+    font-size: 3.4em;
     font-style: italic;
     color: #A44A0C;
 }
 
 .p1-para2p {
     position: relative;
-    top: -8vh;
-    left: 10vh;
-    width: 54rem;
     display: flex;
+    top: -28vh;
+    padding-right: 60em;
+    padding-left: 4em;
+    margin-right: 4em;
     font-size: 1.6rem;
     line-height: 2;
     color: black;
 }
 
 .proj1-header-line5 {
-    position: relative;
     display: flex;
-    top: 14vh;
     width: 100%;
     border-bottom: solid 0.1em black;
     z-index: 1;

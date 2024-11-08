@@ -145,21 +145,25 @@ nav {
 }
 
 .header-line2 {
-    top: 10vh;
+    padding-top: 20vh;
     border-bottom: solid 0.1em black;
 }
 
 .title {
-    font-size: 4em;
     display: flex;
+    padding-top: 10vh;
+    padding-left: 2em;
+    font-size: 4em;
     line-height: 1.2;
     letter-spacing: 0.6rem;
 }
 
 .intro {
     display: flex;
-    left: 16rem;
-    top: 14vh;
+    padding-top: 6vh;
+    padding-bottom: 6vh;;
+    padding-left: 6em;
+    top: 10vh;
     font-size: 1.4em;
     line-height: 2;
     letter-spacing: 0.15rem;
